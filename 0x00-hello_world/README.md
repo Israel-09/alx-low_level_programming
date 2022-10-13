@@ -5,3 +5,4 @@
 4-puts.c is a c file that prints out a message.
 5-printf.c is a C file that prints a message using printf function
 6-size.c is a c file that prints the sizes of different datatypes
+100-intel is a bash script that generates the intel assembly code of a c file.
