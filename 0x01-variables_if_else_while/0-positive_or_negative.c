@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
- * main - is program that generates a random number and detects its sign
- * Return: 0 if program run succesfully. otherwise any other number
+
+/**
+ * main - prints the sign of numbers
+ * Return: 0 if the program runs succesfully. otherwise any othe digit
  */
 int main(void)
 {
