@@ -1,27 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - prints possible value for 2 digits
- * Returns: 0, program always successfull
+ * main - prints the possibilitis of three numbers;
+ * Return: 0 always
  */
 int main(void)
 {
-	int i;
+	int m;
 	int n;
-	int j;
+	int o;
 
-	for (i = '0'; i < '9'; i++)
+	for (m = '0'; m <= '9'; m++)
 	{
-		for (n = i; n <= '9'; n++)
+		for (n = m; n <= '9'; n++)
 		{
-			for (j = n; n <= '9'; j++)
-			{	putchar(i);
-				putchar(n);
-				putchar(j);
-				if ((i < '7') || (n < '8') || (j < '7'))
+			for (o = n; o <= '9'; o++)
+			{
+				if (n > m && o > n)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(m);
+					putchar(n);
+					putchar(o);
+					if (m != '7' || o != '9')
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
