@@ -10,15 +10,15 @@ void jack_bauer(void)
 	int hr1;
 	int hr2;
 
-	for(hr2 = '0'; hr2 <= '2'; hr2++)
+	for (hr2 = '0'; hr2 <= '2'; hr2++)
 	{
-		for(hr1 = '0'; hr1 <= '9'; hr1++)
+		for (hr1 = '0'; hr1 <= '9'; hr1++)
 		{
-			for(min2 = '0'; min2 <= '5'; min2++)
+			for (min2 = '0'; min2 <= '5'; min2++)
 			{
-				for(min1 = '0'; min1 <= '9'; min1++)
+				for (min1 = '0'; min1 <= '9'; min1++)
 				{
-					if(hr2 == '2' && hr1 > '3')
+					if (hr2 == '2' && hr1 > '3')
 					{
 						break;
 					}
@@ -31,7 +31,6 @@ void jack_bauer(void)
 						_putchar(min1);
 						_putchar('\n');
 					}
-				
 				}
 			}
 		}
