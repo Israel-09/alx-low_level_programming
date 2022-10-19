@@ -35,11 +35,11 @@ void less_than_98(int n)
 			_putchar('-');
 			if (n <= -100)
 			{
-			       	_putchar(-n / 100 + '0');
+				_putchar(-n / 100 + '0');
 				_putchar((-n / 10) % 10 + '0');
 				_putchar(-n % 10 + '0');
 			}
-			else if(n <= -10)
+			else if (n <= -10)
 			{
 				_putchar(-n / 10 + '0');
 				_putchar(-n % 10 + '0');
