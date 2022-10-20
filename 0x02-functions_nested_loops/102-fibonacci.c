@@ -10,19 +10,22 @@ int main(void)
 {
 	int a, b, c, i;
 
-	int a = 1;
-	int b = 2;
+	a = 1;
+	b = 2;
 
 	printf("%d, ", a);
 	printf("%d, ", b);
 
-	for (i = 0; i < 5; i++)
+	for (i = 0; i <  48; i++)
 	{
 		c = a + b;
-		printf('"%d, ", c);
+		printf("%d", c);
+		if (i < 47)
+			printf(", ");
 		a = b;
 		b = c;
 	}
+	printf("\n");
 	return (0);
 }
 
