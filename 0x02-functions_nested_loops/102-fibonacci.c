@@ -8,18 +8,19 @@
  */
 int main(void)
 {
-	int a, b, c, i;
+	long int a, b, c;
+	int i;
 
 	a = 1;
 	b = 2;
 
-	printf("%d, ", a);
-	printf("%d, ", b);
+	printf("%li, ", a);
+	printf("%li, ", b);
 
 	for (i = 0; i <  48; i++)
 	{
 		c = a + b;
-		printf("%d", c);
+		printf("%li", c);
 		if (i < 47)
 			printf(", ");
 		a = b;
