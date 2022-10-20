@@ -2,10 +2,11 @@
 
 /**
  * _isdigit - checks if a character is a digit.
+ * @c: character to be checked
  *
- * Return: 1 if upper. Otherwise 0.
+ * Return: 1 if digit. Otherwise 0.
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{
