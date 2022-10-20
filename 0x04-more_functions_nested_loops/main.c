@@ -3,9 +3,9 @@
 
 int main(void)
 {
-	print_line(0);
-	print_line(6);
-	print_line(-5);
-	print_line(8);
+	print_diagonal(3);
+	print_diagonal(0);
+	print_diagonal(5);
+	print_diagonal(-7);
 	return (0);
 }
