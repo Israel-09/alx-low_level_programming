@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * greater_than -executes when n is greater than 
+ * greater_than -executes when n is greater than
  * @n: number to be printed
  */
 void greater_than(int n)
@@ -29,7 +29,13 @@ void greater_than(int n)
 void less_than(int n)
 {
 	_putchar('-');
-	if (n <= -100)
+	if (n <= -1000)
+	{
+		_putchar(-n / 1000 + '0');
+			_putchar((-n / 100) % 10 + '0');
+		_putchar((-n % 100) / 10 + '0');
+	}
+	else if (n <= -100)
 	{
 		_putchar(-n / 100 + '0');
 		_putchar((-n / 10) % 10 + '0');
