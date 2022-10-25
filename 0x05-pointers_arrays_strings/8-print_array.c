@@ -3,6 +3,7 @@
 /**
   * print_array - prints the elements of array
   * @n: element to print
+  * @a: array
   */
 void print_array(int *a, int n)
 {
@@ -10,7 +11,9 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%d%s", a[i], i < ( - 1)? ", ":"");
+		printf("%d", a[i]);
+		if (i < (n - 1)
+				printf(", ");
 	}
 	_putchar('\n');
 }
