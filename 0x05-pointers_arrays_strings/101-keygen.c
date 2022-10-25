@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - generates a random password for the user
@@ -20,7 +21,7 @@ int main(void)
 		password[i] = num + '0';
 	}
 	password[i] = '\0';
-	printf("The generated password is: %s\n", password);
+	printf("Tada! Congrats");
 	return (0);
 }
 
