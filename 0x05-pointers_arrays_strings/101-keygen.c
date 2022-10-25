@@ -21,7 +21,8 @@ int main(void)
 		password[i] = num + '0';
 	}
 	password[i] = '\0';
-	printf("Tada! Congrats");
+	if (strlen(password) <= 15)
+		printf("Tada! Congrats\n");
 	return (0);
 }
 
