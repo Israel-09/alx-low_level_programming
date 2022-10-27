@@ -5,19 +5,18 @@
  * @a: is the array to be reversed.
  * @n: is the number of elements of the array
  */
-void reverse_array(int *a, int n)
+void reverse_array(int *a, int const n)
 {
-	int i, j;
-	int b[n];
+	int b[300], j, i;
 	
 	for (i = 0; i < n; i++)
 	{
 		b[i] = a[i];
 	}
-	printf("%d\n", a[2]);
 	i -= 1;
-	for (j = 0; j < n; j++ , i++)
+	for (j = 0; j < n; i--, j++)
 	{
 		a[j] = b[i];
 	}
+	putchar('\n');
 }

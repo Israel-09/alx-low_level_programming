@@ -1,15 +1,15 @@
 #include "main.h"
+#include <string.h>
 
 int main(void)
 {
-	int n =5;
-	int  a[5] = {4, 5, 6, 7, 8}, i;
-	reverse_array(a, n);
-	for (i = 0; i < n; i++)
+	int a[] = {2, 4, 5, 8, 10, 56};
+	int i;
+
+	reverse_array(a, 6);
+	for (i = 0; i < 6; i++)
 	{
-		putchar(a[i] + '0');
-		putchar(i + '0');
-	}
-	putchar('\n');
+		printf("\n%d, ", a[i]);
+	}	
 	return (0);
 }
