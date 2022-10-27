@@ -7,13 +7,16 @@
  */
 void reverse_array(int *a, int n)
 {
-	int b[n], i, j;
+	int i, j;
+	int b[n];
+	
 	for (i = 0; i < n; i++)
 	{
 		b[i] = a[i];
 	}
+	printf("%d\n", a[2]);
 	i -= 1;
-	for (j = 0; j < n; j++)
+	for (j = 0; j < n; j++ , i++)
 	{
 		a[j] = b[i];
 	}
