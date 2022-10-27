@@ -6,9 +6,9 @@
  * Return: the string;
  *
  */
-char *string_upper(char *s)
+char *string_toupper(char *s)
 {
-	int 1;
+	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
