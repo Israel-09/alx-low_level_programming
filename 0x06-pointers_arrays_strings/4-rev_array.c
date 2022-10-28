@@ -21,5 +21,4 @@ void reverse_array(int *a, int const n)
 	{
 		a[j] = b[i];
 	}
-	putchar('\n');
 }
