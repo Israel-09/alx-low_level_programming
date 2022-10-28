@@ -7,13 +7,16 @@
  */
 void reverse_array(int *a, int const n)
 {
-	int b[300], j, i;
-	
+	int i, j;
+	int b[300];
+
 	for (i = 0; i < n; i++)
 	{
 		b[i] = a[i];
 	}
+
 	i -= 1;
+
 	for (j = 0; j < n; i--, j++)
 	{
 		a[j] = b[i];
