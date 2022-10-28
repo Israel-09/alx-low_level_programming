@@ -18,12 +18,10 @@ char *leet(char *s)
 	{
 		j = 0;
 		while (let[j] != '\0')
-		{	
-			printf("i = %d, j = %d\n", i, j);
+		{
 			if (s[i] == let[j] || s[i] == let[j] + 32)
 			{
 				s[i] = num[j];
-				printf("i = %d, j = %d, %c\n",i, j, let[j]);
 			}
 			j++;
 		}

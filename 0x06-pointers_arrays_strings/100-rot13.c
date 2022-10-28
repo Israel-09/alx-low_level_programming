@@ -21,7 +21,7 @@ char *rot13(char *s)
 				s[i] = code[j];
 				break;
 			}
-		}	
+		}
 	}
 	return (s);
 }
