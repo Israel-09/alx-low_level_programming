@@ -3,8 +3,13 @@
 
 int main(void)
 {
-	char ptr[40] = "my mother, id hte th best 9jd i evev";
-	char *mess = cap_string(ptr);
-	puts(mess);
+	print_number(1024);
+	putchar('\n');
+	print_number(-1024);
+	putchar('\n');
+	print_number(98);
+	putchar('\n');
+	print_number(0);
+	putchar('\n');
 	return (0);
 }
