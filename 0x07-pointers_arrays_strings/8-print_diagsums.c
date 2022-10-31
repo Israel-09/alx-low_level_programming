@@ -22,7 +22,6 @@ void print_diagsums(int *a, int size)
 		if (i == diag1 && ctr < size)
 		{
 			sum1 += a[i];
-			printf("%d\n", i);
 			diag1 +=  size - 1;
 			ctr += 1;
 		}
