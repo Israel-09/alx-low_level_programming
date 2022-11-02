@@ -12,6 +12,7 @@ int len(char *s)
 		return (0);
 	return (1 + len(s + 1));
 }
+
 /**
  * _print_rev_recursion - prints a string reversed using recursion
  * @s: string to be reversed
@@ -21,7 +22,7 @@ void _print_rev_recursion(char *s)
 {
 	int l;
 
-	l = len(s + 1) - 1;
+	l = len(s) - 1;
 	if (l == 0)
 	{
 		_putchar(s[0]);
@@ -31,6 +32,6 @@ void _print_rev_recursion(char *s)
 	else
 	{
 		_putchar(s[l]);
-		_print_rev_recursion(s);
+		_print_rev_recursion(s + 1);
 	}
 }

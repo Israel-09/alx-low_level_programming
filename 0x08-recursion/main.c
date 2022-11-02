@@ -3,6 +3,6 @@
 int main(void)
 {
 	int n;
-	_print_rev_recursion("\nColton Walker");
+	printf("%d\n", _pow_recursion(5, 3));
 	return (0);
 }
