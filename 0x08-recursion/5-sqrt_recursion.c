@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 	return (_sqrt(n, 0));
 }
 /**
- * sqrt - performs the actual operation
+ * _sqrt - performs the actual operation
  * @n: the number to be sqare rooted
  * @i: iterates the funtion
  * Return: the real square root
