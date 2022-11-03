@@ -3,6 +3,6 @@
 int main(void)
 {
 	int n;
-	printf("%d\n", _pow_recursion(5, 3));
+	printf("%d\n", is_prime_number(82));
 	return (0);
 }
