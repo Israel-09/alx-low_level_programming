@@ -10,13 +10,16 @@ int len(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return(1 + len(s + 1));
+	return (1 + len(s + 1));
 }
 /**
  * checker - checkes for the pallindrome
- * @i: the iterator
+ * @n: the iterator
  * @s: the string to be checked
+ * @i: the string length
  *
+ * Return: 1 if string s is a pallindrome
+ * otherwise 0.
  */
 int checker(char *s, int i, int n)
 {
@@ -35,13 +38,12 @@ int checker(char *s, int i, int n)
 int is_palindrome(char *s)
 {
 	int i;
-	char *string;
 
 	i = len(s) - 1;
 
-	if (len == 0)
+	if (i == 0)
 		return (1);
-	return(checker(s, i, 0));
+	return (checker(s, i, 0));
 
 
 }
