@@ -1,3 +1,6 @@
+#ifndef FILE_MAIN
+#define FILE_MAIN
+
 int _isupper(int c);
 int _isdigit(int c);
 char *_memcpy(char *dest, char *src, unsigned int n);
@@ -18,3 +21,5 @@ int _abs(int n);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
 void _puts(char *s);
+
+#endif
