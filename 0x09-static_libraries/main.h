@@ -15,6 +15,6 @@ char *_strcat(char *dest, char *src);
 int _isalpha(int c);
 char *_strpbrk(char *s, char *accept);
 int _abs(int n);
-void puts2(char *str);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
+void _puts(char *s);
