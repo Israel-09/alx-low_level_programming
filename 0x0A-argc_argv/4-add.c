@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		num = atoi(argv[i]);
-		for (k = 0; k < strlen(argv[i]); k++)
+		for (k = 0; k < (int)strlen(argv[i]); k++)
 		{
 			if (!(argv[i][k] >= '0' && argv[i][k] <= '9'))
 			{
