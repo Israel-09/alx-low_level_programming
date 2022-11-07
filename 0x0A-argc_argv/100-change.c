@@ -9,39 +9,38 @@
  */
 int chg(int cent)
 {
-	int i, change;
-
-	change = 0;
-	for (i = 0; cent == 0; i++)
+	int i;
+	
+	for (i = 0; cent > 0; i++)
 	{
-		if (cent > 25)
+		if (cent >= 25)
 		{
 			cent -= 25;
-			change += 1;
+			continue;
 		}
-		else if (cent > 10)
+		if (cent >= 10)
 		{
-			cent -= 10;
-			change += 1;
+			cent = cent - 10;
+			continue;
 		}
-		else if (cent > 5)
+		if (cent >= 5)
 		{
-			cent -= 5;
-			change += 1;
+			cent = cent - 5;
+			continue;
 		}
-		else if (cent > 2)
+		if (cent >= 2)
 		{
-			cent -= 2;
-			change += 1;
+			cent = cent - 2;
+			continue;
 		}
-		else if (cent > 1)
+		if (cent >= 1)
 		{
-			cent -= 1;
-			change += 1;
+			cent = cent - 1;
+			continue;
 		}
-		printf("%d", change);
+
 	}
-	return (change);
+	return (i);
 }
 /**
  * main - number of coin to make change for an amount.
