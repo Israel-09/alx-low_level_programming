@@ -1,14 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
-int main(void)
-{
-	char name[20] = "Inene israel";
-/*	char name1[20] = "favour"; */
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void){
+
+	char s0[30] = "Bob Dylan";
+	char s1[30] = "yla";
 	char *ptr;
-	
-	ptr = _strchr(name, '\0');
-	printf("The value of name is %s\n", ptr); 
-	ptr = _strchr(name, '\n');
-	printf("The value of ptr is %s\n", ptr);
-	return (0);
+
+	ptr = strstr(s0, s1);
+	printf("%s, %s\n", s0, ptr);
+ 	return (0);
 }

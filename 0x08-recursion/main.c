@@ -3,6 +3,8 @@
 int main(void)
 {
 	int n;
-	printf("%d\n", is_prime_number(82));
+	
+	n = is_palindrome("leviel");
+	printf("%d\n", n);
 	return (0);
 }

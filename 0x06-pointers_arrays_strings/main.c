@@ -1,13 +1,16 @@
 #include "main.h"
 #include <string.h>
+#include <limits.h>
 
 int main(void)
 {
-	char hello[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
-	char *ptr;
-
-	ptr = leet(hello);
-	printf("%s\n", ptr);
-	printf("%s\n", hello);
+	print_number(7643);
+	putchar('\n');
+	print_number(21002);
+	putchar('\n');
+	print_number(-9343);
+	putchar('\n');
+	print_number(0);
+	putchar('\n');
 	return (0);
 }

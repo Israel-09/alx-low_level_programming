@@ -7,9 +7,27 @@
  */
 void print_number(int n)
 {
-	unsigned int i;
-
+	int i, j;
+	char num[50];
+	
 	if (n < 0)
+	{
+		_putchar('-');
+		j = -n;
+
+	}
+	else 
+		j = n;
+
+	for (i = 0; j > 0; i++)
+	{
+		num[i] = (j % 10) + '0';
+	}
+	num[i] = '\0';
+	for (i -= 1; i > 0; i--)
+		_putchar(num[i]);
+
+/*	if (n < 0)
 	{
 		_putchar('-');
 		i = -n;
@@ -30,4 +48,5 @@ void print_number(int n)
 	else if (i >= 10)
 		_putchar(i / 10 + '0');
 	_putchar(i % 10 + '0');
+*/
 }
