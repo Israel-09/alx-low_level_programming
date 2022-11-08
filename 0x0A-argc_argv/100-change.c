@@ -10,7 +10,9 @@
 int chg(int cent)
 {
 	int i;
-
+	
+	if (cent <= 0)
+		return (0);
 	for (i = 0; cent != 0; i++)
 	{
 		if (cent >= 25)
