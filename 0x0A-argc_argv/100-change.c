@@ -10,8 +10,8 @@
 int chg(int cent)
 {
 	int i;
-	
-	for (i = 0; cent > 0; i++)
+
+	for (i = 0; cent != 0; i++)
 	{
 		if (cent >= 25)
 		{
@@ -61,5 +61,5 @@ int main(int argc, char *argv[])
 	k = atoi(argv[1]);
 	change = chg(k);
 	printf("%d\n", change);
-
+	return (0);
 }
