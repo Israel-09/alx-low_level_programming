@@ -6,5 +6,5 @@
  */
 void print_all(const char * const format, ...)
 {
-	printf("mug");
+	printf("%s", format);;
 }
