@@ -3,10 +3,10 @@
 
 /**
  * main - prints the opcode of it arguement.
- * @agrc: the number of arguements
+ * @argc: the number of arguements
  * @argv: the array of arguements.
  *
- * Return; 0 always(sucessful)
+ * Return: 0 always(sucessful)
  */
 int main(int argc, char *argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
-		puts("Eroor");
+		puts("Error");
 		exit(2);
 	}
 	arr = (char *)main;
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 			printf("%02hhx\n", arr[i]);
 			break;
 		}
-		printf("%02hhx\n", arr[i]);
+		printf("%02hhx ", arr[i]);
 	}
 	return (0);
 }
