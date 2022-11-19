@@ -3,11 +3,9 @@
 
 int main(void)
 {
-	struct dog my_dog;
+	struct dog *my_dog;
 
-	my_dog.name = "poppy";
-	my_dog.age = 2.5;
-	my_dog.owner = "Bob";
-	printf("My name is %s, and i am %.1f  :) - woof!\n", my_dog.name, my_dog.age);
+	my_dog = new_dog("poppy", 3.5, "Bob");
+	printf("My name is %s, i am %.2f years old\n", my_dog->name, my_dog->age); 
 	return (0);
 }

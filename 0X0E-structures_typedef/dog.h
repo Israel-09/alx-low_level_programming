@@ -1,12 +1,13 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef DOG_H
+#define DOG_H
+
 /**
- * struct dog - contains the detail of dogs
- * @name: the dogs name
- * @age: how old the dog is
- * @owner: the owner of the dog
+ * struct dog - a dog's basic info
+ * @name: first member
+ * @age: second member
+ * @owner: Third member
  *
- * Description: it contains the details of dog.
+ * Description: longer description
  */
 struct dog
 {
@@ -14,4 +15,14 @@ struct dog
 	float age;
 	char *owner;
 };
+
+/**
+ * dog_t - the typedef for struct dog
+ */
+typedef struct dog dog_t;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+
 #endif
