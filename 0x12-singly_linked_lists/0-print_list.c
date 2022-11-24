@@ -23,14 +23,14 @@ int len(char *str)
  *
  * Return: the number if nodes
  */
-size_t print_list(list_t *h)
+size_t print_list(const list_t *h)
 {
 	size_t nodes = 0;
 
 	for (; h != NULL; h = h->next)
 	{
 		if (h->str == NULL)
-			printf("[0] (nil)");
+			printf("[0] (nil)\n");
 		else
 			printf("[%d] %s\n", len(h->str), h->str);
 		nodes += 1;
