@@ -9,7 +9,11 @@
       */
 int main(void)
 {
-		free_listint2(NULL);
-			printf("Freed !\n");
-				return (0);
+		listint_t *head;
+			int n;
+
+				head = NULL;
+					n = pop_listint(&head);
+						printf("-> %d\n", n);
+							return (0);
 }
