@@ -13,6 +13,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int sum;
 	const char *a;
 
+	if (!b)
+		return (0);
 	a = b;
 	while (*b != '\0')
 	{
