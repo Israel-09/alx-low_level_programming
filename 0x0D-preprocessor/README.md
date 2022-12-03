@@ -1,1 +1,1 @@
-comtains code on preprocessor and macros
+contains code on preprocessor and macros
