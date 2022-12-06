@@ -7,7 +7,7 @@
 
 /**
  * read_textfile - reads the content of a trxt file int same dire tory
- * @filename; the name of yhe file
+ * @filename: the name of yhe file
  * @letters: amount of letters to be read
  *
  * Return: the amount of lrtters printed
@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buff;
-	ssize_t p_char, s;
+	ssize_t s;
 
 	if (!filename)
 		return (0);
