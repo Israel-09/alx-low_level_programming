@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * read_textfile - reads the content of a trxt file int same dire tory
