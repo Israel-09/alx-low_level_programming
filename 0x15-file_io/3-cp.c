@@ -60,7 +60,7 @@ int main(int argc, char **argv)
 	{
 		return (-1);
 	}
-	s = read(fd, buff, 2048);
+	s = read(fd, buff, 4098);
 	buff[s] = '\0';
 	chk = file_to(argv[2], buff);
 	if (chk == -2)
