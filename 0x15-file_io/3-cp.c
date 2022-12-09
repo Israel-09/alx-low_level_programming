@@ -30,7 +30,7 @@ int file_to(const char *file_toc, char *text)
 		dprintf(2, "Error: Can't close fd %d\n", fd);
 		return (-1);
 	}
-	
+	return (1);
 }
 /**
  * main - opens the file to be read from
