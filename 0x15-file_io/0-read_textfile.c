@@ -4,6 +4,7 @@
  * read_textfile - this reads a textfile and prints its content
  * @filename: the name of the file to be read
  * @letters: amount of characters to be read frkm the file.
+ * Return: the numbers of character printed if successfull otherwise 0
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -32,11 +33,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buff);
 		return (0);
 	}
-	num_write = write(1, buff, num_read);
+	num_write = write(STDOUT_FILENO, buff, num_read);
 	if ((num_write == -1) || (num_write != num_read))
 	{
 		free(buff);
-		return (num_write);
+		return (0);
 	}
 	close(fd);
 	return (num_write);
