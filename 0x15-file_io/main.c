@@ -1,20 +1,12 @@
 #include "main.h"
 
-/**
-   * main - check the code
-    *
-     * Return: Always 0.
-      */
-int main(int ac, char **av)
+int main(int argc, char **av)
 {
-	    int res;
+	ssize_t num_words;
 
-	        if (ac != 3)
-			    {
-				            dprintf(2, "Usage: %s filename text\n", av[0]);
-					            exit(1);
-						        }
-		    res = append_text_to_file(av[1], av[2]);
-		        printf("-> %i)\n", res);
-			    return (0);
+	if (argc != 2)
+		return (1);
+	num_words = read_textfile(av[1], 144);
+	printf("\n%li words printed\n", num_words);
+	return (0);
 }
