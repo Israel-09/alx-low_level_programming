@@ -6,7 +6,7 @@ int main()
 {
 	char *goal;
 	
-	char *home = "Hello World!";
+	char *home = NULL;
 	goal = _strdup(home);
 	if (goal == NULL)
 	{
