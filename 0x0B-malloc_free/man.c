@@ -6,7 +6,7 @@ int main()
 {
 	char *goal;
 	
-	char home[] = "mnasdlkbsdfadklbjfsdkblsdfjbadwssdfnlfdg lndsfgljkbfgdfgadsfgj k;dfdgadsfj k;gdasfgadsfgjbadfgadsfkgafgadsfgaddfg/bfasdfgkadsfgadfgadfgadfgadfgandfgadfadfgadfgadfgadnf;gadfgadfgadfgadfgadfadfgadsfgadfghdaf";
+	char *home = "Hello World!";
 	goal = _strdup(home);
 	if (goal == NULL)
 	{

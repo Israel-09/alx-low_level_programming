@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - create the duplicate of an array
@@ -10,22 +11,19 @@
  */
 char *_strdup(char *str)
 {
-	int j;
-	long unsigned int i;
+	int len;
+	int i;
 	char *nstr;
-	
-	for (j = 0; str[j] != '\0'; j++)
-	{
-	}
-	nstr = malloc(sizeof(char) * j);
+
+	len = strlen(str);
+	nstr = malloc(sizeof(char) * (len + 1));
 	if (nstr == NULL)
-	{
-		return (0);
-	}
-	for (i = 0; str[i] != '\0'; i++)
+		return (NULL);
+	for (i = 0; i < len; i++)
 	{
 		nstr[i] = str[i];
 	}
-	str[i] = '\0';
+	nstr[i] = '\0';
+	
 	return (nstr);
 }
