@@ -57,8 +57,7 @@ char *argstostr(int ac, char **av)
 		lenght += _strlen(av[i]);
 	}
 
-	if (i > 1)
-		lenght += i - 1;
+	lenght += i;
 
 	str = malloc(sizeof(char) * lenght);
 	if (str == NULL)
