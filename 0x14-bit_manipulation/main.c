@@ -3,21 +3,22 @@
 
 /**
  * main - check the code
-  *
-   * Return: Always 0.
-    */
-    int main(void)
-    {
-        unsigned long int n;
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+        unsigned int n;
+	
+	n = flip_bits(1024, 1);
+	printf("%u\n", n);
+	n = flip_bits(402, 98);
+	printf("%u\n", n);
+	n = flip_bits(1024, 3);
+	printf("%u\n", n);
+	n = flip_bits(1024, 1025);
+	printf("%u\n", n);
 
-	    n = 1024;
-	        clear_bit(&n, 10);
-		    printf("%lu\n", n);
-		        n = 0;
-			    clear_bit(&n, 10);
-			        printf("%lu\n", n);
-				    n = 98;
-				        clear_bit(&n, 1);
-					    printf("%lu\n", n);
-					        return (0);
-						}
+	print_binary(n);
+	return (0);
+}
