@@ -1,7 +1,7 @@
 #include "main.h"
 
-/*
- * set_bit - ste the bit at index to 1
+/**
+ * set_bit - set the bit at index to 1
  * @n: the number to be manipulated
  * @index: the index of the number to be manipulated
  *
@@ -9,9 +9,11 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int p = *n;
+	unsigned long int mask;
 
-	if (!n)
+	if (n == NULL)
 		return (-1);
-	return (p | (1 << index));
+	mask = 1 << index;
+	*n = *n | mask;
+	return (1);
 }
