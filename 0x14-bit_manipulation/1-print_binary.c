@@ -6,22 +6,4 @@
  */
 void print_binary(unsigned long int n)
 {
-	long int i = 63;
-	unsigned long int count;
-
-	if (n == 0)
-		putchar('0');
-	for (i = 63; i >= 0; i--)
-	{
-		count = (1 << i);
-		/*printf("i :%li, %lu\n",  i, count);*/
-		if (count <= n)
-		{
-			if ((n & count) == count)
-				putchar('1');
-			else
-				putchar('0');
-		}
-
-	}
 }
