@@ -11,8 +11,9 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int value;
 
 	value = 1 << index;
-	if (value > n)
+	if (index > 64)
 		return (-1);
+	printf("value: %ld\tn: %ld\n", value, n);
 	if ((n & value) == value)
 		return (1);
 	return (0);
