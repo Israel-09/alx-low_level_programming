@@ -1,53 +1,23 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-/**
- * print_grid - prints a grid of integers
-  * @grid: the address of the two dimensional grid
-   * @width: width of the grid
-    * @height: height of the grid
-     *
-      * Return: Nothing.
-       */
-       void print_grid(int **grid, int width, int height)
-       {
-           int w;
-	       int h;
+int main(int ac, char **av)
+{
+	char s[80];
+	int pin;
 
-	           h = 0;
-		       while (h < height)
-		           {
-			           w = 0;
-				           while (w < width)
-					           {
-						               printf("%d ", grid[h][w]);
-							                   w++;
-									           }
-										           printf("\n");
-											           h++;
-												       }   
-												       }
+	printf("Enter your username and pin (pass, pin): ");
+	scanf("%s", s);
+	scanf("%d", &pin);
+	if (pin == 1234)
+	{
+		printf("Correct pin\nSuccessful Login!\n");
+	}
+	else
+	{
+		printf("THE pin is 1234");
+		printf("Incorrect Pin\nTr Again.\n");
+	}
 
-												       /**
-												        * main - check the code for ALX School students.
-													 *
-													  * Return: Always 0.
-													   */
-													   int main(void)
-													   {
-													       int **grid;
+	return (0);
 
-													           grid = alloc_grid(6, 4);
-														       if (grid == NULL)
-														           {
-															           return (1);
-																       }
-																           print_grid(grid, 6, 4);
-																	       printf("\n");
-																	           grid[0][3] = 98;
-																		       grid[3][4] = 402;
-																		           print_grid(grid, 6, 4);
-																			       free_grid(grid, 4);
-																			           return (0);
-																				   }
+}
