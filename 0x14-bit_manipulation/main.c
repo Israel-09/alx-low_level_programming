@@ -8,7 +8,7 @@
       */
 int main(void)
 {
-	print_binary(2929292929);
+	print_binary(0);
 	putchar('\n');
 	return (0);
 }
