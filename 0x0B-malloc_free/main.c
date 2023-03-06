@@ -9,10 +9,9 @@ void print_tab(char **tab)
 		printf("%s\n", tab[i]);
 	}
 }
-int main(int ac, char **av)
+int main(void)
 {
 	char **tab;
-	int i;
 
 	tab = strtow("      ALX School #cisfun	");
 	if (tab == NULL)
@@ -21,11 +20,11 @@ int main(int ac, char **av)
 		return (1);
 	}
 	print_tab(tab);
-	while (*tab)
+/*	while (tab[i] != NULL)
 	{
-		free(*tab);
-		tab++;
+		free(tab[i]);
+		i++;
 	}
-	free(tab);
+	free(tab);*/
 	return (0);
 }
