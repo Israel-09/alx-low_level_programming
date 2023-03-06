@@ -1,23 +1,31 @@
 #include "main.h"
 
+void print_tab(char **tab)
+{
+	int i;
+
+	for (i = 0; tab[i] != NULL; i++)
+	{
+		printf("%s\n", tab[i]);
+	}
+}
 int main(int ac, char **av)
 {
-	char s[80];
-	int pin;
+	char **tab;
+	int i;
 
-	printf("Enter your username and pin (pass, pin): ");
-	scanf("%s", s);
-	scanf("%d", &pin);
-	if (pin == 1234)
+	tab = strtow("      ALX School #cisfun	");
+	if (tab == NULL)
 	{
-		printf("Correct pin\nSuccessful Login!\n");
+		printf("Failed\n");
+		return (1);
 	}
-	else
+	print_tab(tab);
+	while (*tab)
 	{
-		printf("THE pin is 1234");
-		printf("Incorrect Pin\nTr Again.\n");
+		free(*tab);
+		tab++;
 	}
-
+	free(tab);
 	return (0);
-
 }
