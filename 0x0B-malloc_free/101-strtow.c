@@ -1,19 +1,39 @@
 #include "main.h"
 
-int _sstrlen(char *s)
+/**
+ * word_count - counts the amount of words in a string
+ * @str: the string
+ * Return: the number of words in a string
+ */
+int word_count(char *str)
+{
+	int i, count = 0;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ')
+			continue;
+		else
+		{
+			if (str[i + 1] != ' ' && str[i + 1] != '\0')
+			{
+				count += 1;
+			}
+		}
+	}
+	return (count);
+}
+
+/**
+ * sslen - checks the lenght of each word
+ * @s: the string to be checked
+ * Return: the number of letters in a word
+ */
+int sslen(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != ' ', s[i] != '\t', s[i] != '\0'; i++)
-		;
-	return (i);
-
-}
-int white_space(char *s)
-{
-	int i = 0;
-
-	for(; s[i] == ' ', s[i] == '\t', s[i] == '\n'; i++)
+	for (i = 0; s[i] != ' '; i++)
 	{
 		if (s[i] == '\0')
 			break;
@@ -21,58 +41,51 @@ int white_space(char *s)
 	return (i);
 }
 
-int copy_str(char *dest, char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != ' ', s[i] != '\t', s[i] != '\0'; i++)
-	{
-		dest[i] = s[i];
-	}
-	dest[i] = '\0';
-	return (i);
-}
 /**
- * strtow - splits strings to words
- * @str: strings to be splited
- * Return: pointer to an array of strings
+ * strtow - breaks a string to words
+ * @s: the string to  be broken
+ * Return: an array of the words.
+ * Otherwise NULL
  */
-char **strtow(char *str)
+char **strtow(char *s)
 {
-	char **s_arr;
-	int i, str_count = 1, j;
-	int index = 0;
+	int i = 0, j, w_count = 0, k = 0;
+	int w_len = 0;
+	char **str;
 
-	if (str == NULL)
+	if (!s)
 		return (NULL);
-	/*count of amount of words in a string*/
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] != ' ' || str[i] != '\t')
-		{
-			if (str[i + 1] == '\t' || str[i + 1] == ' ')
-				str_count += 1;
-		}
-	}
-	str_count += 1;/*count for the last null string*/
-	s_arr = malloc(sizeof(char *) * str_count);
-	if (s_arr == NULL)
+	w_count = word_count(s);
+	str = malloc(sizeof(char *) * w_count + 1);
+	if (!str || w_count == 0)
 		return (NULL);
-	for (i = 0; i < str_count - 1; i++)
+	for (j = 0; s[i] != '\0'; i++)
 	{
-		str += index;
-		index += white_space(str);
-		s_arr[i] = malloc(sizeof(char) * _sstrlen(str));
-		if (s_arr[i] == NULL)
+		if (s[i] == ' ')
+			continue;
+		if (w_len == 0)
 		{
-			for (j = 0; j < i; j++)
-				free(s_arr[j]);
-			free(s_arr);
+			w_len = sslen(s + i);
+			str[k] = malloc(sizeof(char) * w_len + 1);
 		}
-		index += copy_str(s_arr[i], str);
+		if (str[k] == NULL)
+			return (NULL);
+		if (j == w_len)
+		{
+			str[k][j] = '\0';
+			j = 0;
+			k++;
+			w_len = sslen(s + i);
+			str[k] = malloc(sizeof(char) * w_len + 1);
+			if (str[k] == NULL)
+				return (NULL);
+			str[k][j] = s[i];
+			j++;
+			continue;
+		}
+		str[k][j] = s[i];
+		j++;
 	}
-	s_arr[i] = NULL;
-
-	printf("%d\n", str_count);
-	return (s_arr);
+	str[k + 1] = NULL;
+	return (str);
 }
