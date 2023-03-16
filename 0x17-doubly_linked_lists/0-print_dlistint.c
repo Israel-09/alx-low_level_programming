@@ -2,7 +2,7 @@
 
 /**
  * print_dlistint - prints all the elements in a dlist_int
- * @head: head of a dlist_int
+ * @h: head of a dlist_int
  *
  * Return: the amount of elements of a dlist_int
  */
