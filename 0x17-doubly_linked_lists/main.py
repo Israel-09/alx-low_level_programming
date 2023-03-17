@@ -13,7 +13,7 @@ def find_multiple(num):
                             break
                         if (k == 2):
                             print(s_mul)
-                            break
+                            return
                         lent -= 1
 
-find_multiple(997799)
+find_multiple(999 * 999)
