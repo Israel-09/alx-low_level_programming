@@ -1,10 +1,12 @@
 #include "lists.h"
 
 /**
- * sun_dlistint - returns the sum of all the data (n) of a dlistint_t linked list.
+ * sum_dlistint - returns the sum of all the data (n)
+ * of a dlistint_t linked list.
+ *
  * @head: head of a dlistint_t linked list.
  *
- * Returns:	empty list - 0
+ * Return:	empty list - 0
  *		otherwise - 1
  */
 int sum_dlistint(dlistint_t *head)
