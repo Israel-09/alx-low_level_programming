@@ -1,6 +1,8 @@
 #ifndef FILE_MAIN
 #define FILE_MAIN
 
+#include <stdlib.h>
+
 int _isupper(int c);
 int _isdigit(int c);
 char *_memcpy(char *dest, char *src, unsigned int n);

@@ -1,15 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
-int main()
+/**
+ * main - check the code
+  *
+   * Return: Always EXIT_SUCCESS.
+    */
+int main(void)
 {
-	int i = '9';
-
-	if (_isdigit(i) == 1)
-	{
-		printf("i is a digit\n");
-	}
-	else
-		printf("i is not a digit\n");
-	return (0);
+	printf("%d\n", _strlen("My Dyn Lib"));
+	return (EXIT_SUCCESS);
 }

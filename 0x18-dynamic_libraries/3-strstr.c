@@ -7,7 +7,8 @@
  *
  * Return: pointer to the begining of the located substring.
  */
-char *_strstr(char *haystack, char *needle)
+char *_strstr(__attribute__((unused))char *haystack, char *needle)
 {
+	return (needle);
 }
 
