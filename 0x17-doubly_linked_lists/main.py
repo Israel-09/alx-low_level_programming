@@ -6,16 +6,17 @@ def find_multiple(num):
         for  j in range(1000):
             if i > 99 and j > 99:
                 mul = i * j
-                if (mul > 100000):
+                if (mul > 900000):
                     s_mul = str(mul)
                     lent = len(s_mul) - 1
                     for k in range(len(s_mul)):
                         if s_mul[k] != s_mul[lent]:
                             break
                         if (k == 2):
-                            max_list.append(int(s_mul))
-                            break
+                            print(int(s_mul), end='')
+                            return
                         lent -= 1
-    print(max(max_list))
+    max_n = max(max_list)
+    print("{:d}".format(max_n), end='')
 
 find_multiple(998001)
