@@ -57,6 +57,7 @@ char **strtow(char *s)
 		return (NULL);
 	w_count = word_count(s);
 	str = malloc(sizeof(char *) * w_count + 1);
+	printf("allocated %lu first\n", sizeof(char *) * w_count + 1);
 	if (!str || w_count == 0)
 		return (NULL);
 	for (j = 0; s[i] != '\0'; i++)
@@ -67,6 +68,7 @@ char **strtow(char *s)
 		{
 			w_len = sslen(s + i);
 			str[k] = malloc(sizeof(char) * w_len + 1);
+			printf("allocated %lu first\n", (sizeof(char) * (w_len + 1)));
 		}
 		if (str[k] == NULL)
 			return (NULL);
@@ -79,6 +81,7 @@ char **strtow(char *s)
 			str[k] = malloc(sizeof(char) * w_len + 1);
 			if (str[k] == NULL)
 				return (NULL);
+			printf("allocated %lu first\n", sizeof(char) * w_len + 1);
 			str[k][j] = s[i];
 			j++;
 			continue;

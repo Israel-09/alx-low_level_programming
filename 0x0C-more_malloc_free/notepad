@@ -1,0 +1,36 @@
+//conditions
+
+if new_size > old_size:
+	added memory unintialized
+if pointer == null:
+	malloc(new size)
+if old size == new size:
+	return ptr
+if new_size == zero:
+	if ptr != NULL:
+		free(ptr)
+//conditions
+
+//pseudocode
+initialize new_ptr
+
+if pointer == NULL
+	if new_size == zero
+		free(ptr);
+		return null)
+	else:
+		malloc(new_size)
+		return (new size)
+if (new_size == old_size):
+	return(ptr);
+new_ptr = malloc(new_size);
+if (new_size > old_size):
+	for (i = 0; i < old_size; i++)
+		new_ptr[i] = old_ptr[i]
+	free(ptr)
+	return (new_ptr)
+for (i = 0; i < old_size; i++)
+	new_ptr[i] = old_ptr[i]
+free(ptr)
+return (new_ptr)
+
