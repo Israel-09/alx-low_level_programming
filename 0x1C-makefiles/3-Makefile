@@ -6,13 +6,17 @@ NAME = school
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) -o $@ $^
 
 %.o: %.c m.h
-	$(CC) -c $< -o $@
+	$(CC) -c -o $@ $<
 
 clean:
-	rm -f $(OBJ) $(NAME)
+	rm -f *~ $(NAME)
 
+oclean:
+	rm -f $(OBJ)
 
-RE: clean $(NAME)
+fclean: clean oclean
+
+re: oclean all
