@@ -21,7 +21,7 @@ int copy_ft(int *fd, char **av)
 			fprintf(stderr, "Error: Can't read from file %s\n", av[1]);
 			return (98);
 		}
-		w_chk = write(fd[1], buff, 1024);
+		w_chk = write(fd[1], buff, r_chk);
 		if (w_chk == -1)
 		{
 			fprintf(stderr, "Error: Can't write to file %s\n", av[2]);
