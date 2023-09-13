@@ -22,26 +22,19 @@ int binary_search(int *array, size_t size, int value)
 		mid = (l + r) / 2;
 
 		printf("Searching in array: ");
-		for (i = l; i <= r; i++)
+		for (i = l; i <= r ; i++)
 		{
-			printf("%d%s", array[i], i < r ? ", " : "");
-		}
-		printf("\n");
-		if (array[mid] == value)
-		{
-			return (mid);
+			printf("i = %lu\tr = %lu\n", i, r);
+
+	/*		printf("%d%s", array[i], i < r ? ", " : "");*/
 		}
 
-		else if (array[mid] > value)
-		{
+		if (array[mid] > value)
 			r = mid - 1;
-		}
-
-		else
-		{
+		else if (array[mid] < value)
 			l = mid + 1;
-		}
-
+		else 
+			return (mid);
 	}
 	return (-1);
 }
